@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ANAVI: Audio Noise Awareness using Visuals of
+        Indoor environments for NAVIgation">
+  <meta name="keywords" content="Robots, Acoustic Noise, Vision,  Learning, SoundSpaces, Habitat">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANAVI: Audio Noise Awareness using Visuals of
+    Indoor environments for NAVIgation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://vid2robot.github.io">
+            Vid2Robot
+          </a>
+          <a class="navbar-item" href="https://flex-cap.github.io">
+            FlexCap
+          </a>
+          <a class="navbar-item" href="https://sites.google.com/andrew.cmu.edu/ttp/home">
+            Tranformers for Task Planning
+          </a>
+          <a class="navbar-item" href="https://robotics-fm-survey.github.io/">
+            Survey on Robotic Foundational Models
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ANAVI: Audio Noise Awareness using Visuals of
+            Indoor environments for NAVIgation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://vidhijain.github.io">Vidhi Jain</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://rishi-v.github.io/">Rishi Veerapaneni</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://talkingtorobots.com/yonatanbisk.html">Yonatan Bisk</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Carnegie Mellon University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>CoRL 2024</b></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="anavi_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/vidhiJain/anavi"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/vidhiJain/anavi/releases/tag/v1.0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Simulated Data</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1wCTYn54npf3gcO2kHp8D2DEP51h_oFsI?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Real Robot Action Audio</span>
+                </a>
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/video.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        ANAVI is a framework for enabling home robots to estimate the noise levels in indoor environments using only visual information.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose Audio Noise Awareness using Visuals of
+Indoor environments for NAVIgation (ANAVI) for quieter robot path planning.  
+While humans are naturally aware of the noise they make and its impact on those around them, robots currently lack this awareness. 
+A key challenge in achieving audio awareness for robots is estimating <i>how loud will the robot’s actions be at a listener’s location?</i> 
+Since sound depends upon the geometry and material composition of rooms, we train the robot to passively perceive loudness using visual observations of indoor environments. 
+  To this end, we generate data on how loud an `impulse' sounds at different listener locations in simulated homes, and train our Acoustic Noise Predictor (ANP). Next, we collect acoustic profiles corresponding to different actions for navigation. Unifying ANP with action acoustics, we demonstrate experiments with 
+wheeled (Hello Robot Stretch) and legged (Unitree Go2) robots so that these robots adhere to the noise constraints of the environment.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Predictions on Real World Panoramas</h2>
+        <div class="content has-text-centered">
+          <div id="carousel-demo" class="carousel">
+            <div class="carousel-item has-background">
+              <img class="is-background" src="./static/combined_plots/IMG_1069_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_1070_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_1073_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_5383_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_5384_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_5385_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_5386_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_5388_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_6627_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/IMG_6629_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/aims_corridor_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/closet_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/cmu_corridor_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/colored_corridor_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/dining_area_pano_2_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/ghc5_desks_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/ghc5_lobby_pano_resized_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/ms_lounge_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/outside_audi_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/rishi_pano_1_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/simmons_audi_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/sparkles_pano_4_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/stairs_echo_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/tepper_graffiti_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/tepper_millie_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/tepper_stairs_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/y1_listener_map_combined.png" alt="Image">
+            </div>
+            <div class="carousel-item has-background">
+                <img class="is-background" src="./static/combined_plots/y2_listener_map_combined.png" alt="Image">
+            </div>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              bulmaCarousel.attach('#carousel-demo', {
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                loop: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{jain2024anavi,
+  author    = {Jain, Vidhi and Veerapaneni, Rishi and Bisk, Yonatan},
+  title     = {ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation},
+  journal   = {8th Annual Conference on Robot Learning},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/anavi_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/vidhiJain" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Fun fact: "anavi" means peace-loving, kind to people. <br>
+            This website is inspired from <a
+            href="https://github.com/nerfies/nerfies.github.io">this source code</a>, which is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
