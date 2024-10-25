@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ANAVI: Audio Noise Awareness using Visuals of
-        Indoor environments for NAVIgation">
+        content="ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation">
   <meta name="keywords" content="Robots, Acoustic Noise, Vision,  Learning, SoundSpaces, Habitat">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ANAVI: Audio Noise Awareness using Visuals of
-    Indoor environments for NAVIgation</title>
+  <meta name="twitter:title" content="ANAVI: Audio Noise Awareness using Visuals of
+  Indoor environments for NAVIgation">
+  <meta name="twitter:description" content="">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/arch.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>ANAVI: Audio Noise Awareness using Visuals of Indoor environments for NAVIgation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -109,7 +113,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2410.18932"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -197,7 +201,10 @@ wheeled (Hello Robot Stretch) and legged (Unitree Go2) robots so that these robo
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Predictions on Real World Panoramas</h2>
-        <div class="content has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            We collect real-world panorama of indoor environments to visualize the model's predictions. We focus on sim-to-real performance of the audio prediction, as once accurately estimated, these values can be weighted against distance for audio-informed planners.
+            </p>
           <div id="carousel-demo" class="carousel">
             <div class="carousel-item has-background">
               <img class="is-background" src="./static/combined_plots/IMG_1069_listener_map_combined.png" alt="Image">
@@ -284,7 +291,18 @@ wheeled (Hello Robot Stretch) and legged (Unitree Go2) robots so that these robo
                 <img class="is-background" src="./static/combined_plots/y2_listener_map_combined.png" alt="Image">
             </div>
           </div>
-
+          <p>
+            First row shows the real-world panorama. The leftmost and rightmost edges correspond to  45&deg;, and we change angles in clockwise direction from left-to-right. 
+            The reason for non-increasing order of angles on x-axis is that panorama's are taken left-to-right, that is, clockwise, whereas angles are measured anti-clockwise. 
+            Note that the cardinal directions indicated on the plots does not imply that the panoramo starting direction and are only for illustration purposes. 
+            <br>
+            <br>
+            Second row shows heatmap plot with the model's prediction for different distance and direction values. The direction is shown on x-axis, covering 360&deg;, and the distances on y-axis range from 0 to 10 meters. Note that the direction is aligned with the visual image, i.e. it starts from -45&deg; to 0, then reduces 270&deg;, 180&deg; 90&deg;, and finally to 45&deg;. 
+            <br>
+            <br>
+            Third row shows the difference from the distance based baseline. Since the distance based baseline doesn't depend on the image, we visualize the variation in our model's prediction from the baseline. Here the green indicates where the model predicts significantly higher normalized max dB values than distance-based linear regression model, and purple indicates significantly lower normalized max dB values than naive baseline. Note that the dB values are normalized from 0 to 1.
+          
+          </p>
           <script>
             document.addEventListener('DOMContentLoaded', () => {
               bulmaCarousel.attach('#carousel-demo', {
